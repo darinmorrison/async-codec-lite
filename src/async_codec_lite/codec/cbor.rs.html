@@ -196,7 +196,7 @@
             <span class="ident">name</span>: <span class="string">&quot;Test name&quot;</span>.<span class="ident">to_owned</span>(),
             <span class="ident">data</span>: <span class="number">34</span>,
         };
-        <span class="ident">codec</span>.<span class="ident">encode</span>(<span class="ident">item1</span>.<span class="ident">clone</span>(), <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">buff</span>).<span class="ident">unwrap</span>();
+        <span class="ident">codec</span>.<span class="ident">encode</span>(<span class="ident">item1</span>, <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">buff</span>).<span class="ident">unwrap</span>();
 
         <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">start</span> <span class="op">=</span> <span class="ident">buff</span>.<span class="ident">clone</span>().<span class="ident">split_to</span>(<span class="number">4</span>);
         <span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">codec</span>.<span class="ident">decode</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">start</span>).<span class="ident">unwrap</span>(), <span class="prelude-val">None</span>);
